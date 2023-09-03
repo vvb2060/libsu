@@ -2,8 +2,6 @@ plugins {
     id("com.android.library")
 }
 
-group="com.github.topjohnwu.libsu"
-
 android {
     namespace = "com.topjohnwu.superuser.io"
     defaultConfig {
@@ -12,7 +10,7 @@ android {
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    compileOnly("androidx.annotation:annotation:1.6.0")
     api(project(":core"))
     api(project(":nio"))
 }
